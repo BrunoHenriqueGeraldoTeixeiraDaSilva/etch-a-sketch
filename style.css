@@ -1,0 +1,146 @@
+*{
+    padding:0;
+    margin: 0; 
+    box-sizing: border-box;
+}
+
+body{
+    background:black;
+    
+
+}
+
+#main{
+    display:flex;
+    flex-direction:column;
+}
+
+
+#container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.grid-square {
+    height: 30px;
+    width: 30px;
+    border: 2px solid red;     
+}
+
+#prompt{
+    display:flex;
+    padding: 50px;
+    justify-content:center;
+    align-items:center;
+    gap: 50px;
+    color: rgb(0, 255, 0);
+}
+
+#input{
+    border: 2px solid rgb(0, 255, 0);
+    border-radius: 20px;
+    padding:10px 15px;
+    font-size:20px;
+}
+
+#input:hover{
+    background:red;
+    cursor: text;
+}
+
+#submit-btn{
+    padding:10px 17px;    
+    border-radius:200px;
+    margin-left: -35px;
+    border:2px solid rgb(0, 255, 0);
+    cursor:pointer;
+    color: rgb(0, 255, 0);
+    font-weight:600;
+    font-size: 20px;
+    
+}
+
+#submit-btn:hover{
+    background:red;
+}
+
+
+input::placeholder {
+    color: rgb(0, 255, 0);  
+    opacity: 1;   
+}
+
+
+#grid-text{
+    font-weight: bold;
+    font-size: 32px;
+}
+
+
+.background-color{
+    background:rgb(0, 255, 0);
+}
+
+
+
+
+#grid-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.warning{
+    color: red;
+    font-weight:bold;
+    font-size: 20px;
+
+}
+
+#reset-btn{
+    margin-left: -100px;
+    padding: 20px 30px;
+    border:none;
+    border-radius: 200px;
+    font-weight: bold;
+    background: rgb(0, 255, 0);
+    color:white;
+    box-shadow: 1px 2px 2px red;
+    transition: transform 0.5s ease;
+}
+
+#reset-btn:hover{
+    cursor: pointer;
+    transform: scale(1.5);
+    background: red;
+}
+
+#button-container{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:center;
+    gap: 50px;
+}
+
+#raibow-button{
+    margin-left: -100px;
+    padding: 20px 23px;
+    border:none;
+    border-radius: 200px;
+    font-weight: bold;
+    background: linear-gradient(to right, red, orange, rgb(255, 204, 0), green, blue, indigo, violet);
+    color:white;
+    box-shadow: 1px 2px 2px white;
+    transition: transform 0.5s ease;
+}
+
+#raibow-button:hover{
+    cursor: pointer;
+    transform: scale(1.5);
+    background: red;
+}
