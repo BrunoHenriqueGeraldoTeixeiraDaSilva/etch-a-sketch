@@ -4,8 +4,9 @@ const submit = document.getElementById("submit-btn");
 const input = document.getElementById("input")
 const prompt = document.getElementById("prompt");
 const reset = document.getElementById("reset-btn");
-const raibow = document.getElementById("raibow-button");
+const rainbow = document.getElementById("raibow-button");
 
+let rainbowMode = false;
 
 //CREATING ELEMENTS
   
@@ -37,7 +38,12 @@ function createGrid(size){
         container.appendChild(square);
 
         square.addEventListener("mouseover", () =>{
-            square.classList.add("background-color");
+            if (rainbowMode) {
+            // set a random rainbow color if raindbow is checked
+            square.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+            } else {
+            square.classList.add("background-color"); // normal behavior
+            };
         })
     }
 } 
@@ -64,15 +70,24 @@ function getUserInput(){
     })
 }
 
+//reset button event listiner
 reset.addEventListener("click", resetGrid);
+
+//rainbow button event listiner
+rainbow.addEventListener("click", () =>{
+    rainbowMode = true;
+})
 
 function resetGrid(){
     const squares = document.querySelectorAll(".grid-square");
     for (const square of squares){
         square.style.backgroundColor = "black";
     }
+    rainbowMode = false;
     createGrid(16);
 }
+
+
 
 createGrid(16);
 getUserInput();
